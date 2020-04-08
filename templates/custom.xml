@@ -19,4 +19,17 @@
       <option name="KOTLIN" value="true" />
     </context>
   </template>
+  <template name="refresh_controller" value="import android.os.Bundle&#10;import androidx.lifecycle.Observer&#10;import androidx.recyclerview.widget.LinearLayoutManager&#10;import com.xiqu.android.base.delegate.autoCleared&#10;import $modulePackage$.R&#10;&#10;/**&#10; * @author mmw&#10; * @date $date$&#10; **/&#10;class $Name$$Controller$ : Base$Controller$&lt;$Binding$, $ViewModel$&gt;() {&#10;&#10;    private var mAdapter by autoCleared&lt;$Name$Adapter&gt;()&#10;&#10;    override fun getLayoutId(): Int = R.layout.$layoutId$&#10;&#10;    override fun init(savedInstanceState: Bundle?) {&#10;        mBinding.recyclerView.apply {&#10;            layoutManager = LinearLayoutManager(mContext)&#10;        }&#10;        mAdapter = $Name$Adapter().apply {&#10;            bindToRecyclerView(mBinding.recyclerView)&#10;            setOnItemClickListener { _, _, position -&gt;&#10;                mAdapter.getItem(position)?.apply {&#10;&#10;                }&#10;            }&#10;        }&#10;&#10;        mViewModel.$results$.observe(this, Observer {&#10;            val loadMore = mViewModel.loadMore.value ?: false&#10;            it?.apply {&#10;                if (!loadMore) {&#10;                    mAdapter.setNewData(it.list)&#10;                    if (!this.isHasNext) {&#10;                        mAdapter.loadMoreEnd()&#10;                    }&#10;                } else {&#10;                    mAdapter.addData(it.list)&#10;                    if (this.isHasNext) {&#10;                        mAdapter.loadMoreComplete()&#10;                    } else {&#10;                        mAdapter.loadMoreEnd()&#10;                    }&#10;                }&#10;            } ?: apply {&#10;                if (loadMore) {&#10;                    mAdapter.loadMoreFail()&#10;                }&#10;            }&#10;        })&#10;&#10;        mBinding.viewModel = mViewModel&#10;        mBinding.setLifecycleOwner(this)&#10;        mBinding.executePendingBindings()&#10;&#10;        mViewModel.onRefresh()&#10;    }&#10;&#10;}" description="默认的下拉刷新控制器" toReformat="false" toShortenFQNames="true">
+    <variable name="modulePackage" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="date" expression="date()" defaultValue="" alwaysStopAt="false" />
+    <variable name="Name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Controller" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Binding" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ViewModel" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="layoutId" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="results" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
 </templateSet>
