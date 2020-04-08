@@ -4,4 +4,19 @@
       <option name="XML" value="true" />
     </context>
   </template>
+  <template name="refresh_view_mdel" value="import android.app.Application&#10;import androidx.lifecycle.MediatorLiveData&#10;import androidx.lifecycle.MutableLiveData&#10;import androidx.lifecycle.ViewModel&#10;import com.xiqu.android.base.bean.errorMessage&#10;import com.xiqu.android.base.bean.isSuccess&#10;import com.xiqu.android.common.ktx.asLiveData&#10;import com.xiqu.android.common.ktx.toast&#10;import com.xiqu.box.user.repository.UserRepository&#10;import javax.inject.Inject&#10;&#10;/**&#10; * @author mmw&#10; * @date $DATE$&#10; **/&#10;class $ViewModel$ @Inject constructor(&#10;        private val application: Application,&#10;        private val $repository$: $Repository$&#10;) : ViewModel() {&#10;&#10;    val loading = MediatorLiveData&lt;Boolean&gt;()&#10;&#10;    val loadMore = MutableLiveData&lt;Boolean&gt;()&#10;&#10;    val $results$ = MutableLiveData&lt;$Result$&gt;()&#10;&#10;    private var currentPage = 1&#10;&#10;    fun onRefresh($param$: $ParamType$) {&#10;        $getList$($param$)&#10;    }&#10;&#10;    fun $getList$($param$: $ParamType$, isLoadMore: Boolean = false) {&#10;        loadMore.value = isLoadMore&#10;        if (!isLoadMore) {&#10;            loading.value = true&#10;        }&#10;        val page = if (isLoadMore) currentPage else 1&#10;        loading.addSource($repository$.$getListFlowable$.asLiveData()) {&#10;            loading.value = false&#10;            it.isSuccess()?.apply {&#10;                currentPage = page + 1&#10;                $results$.value = this&#10;            } ?: apply {&#10;                application.toast(it.errorMessage())&#10;                $results$.value = null&#10;            }&#10;        }&#10;    }&#10;&#10;}" description="默认的下拉刷新ViewModel" toReformat="false" toShortenFQNames="true">
+    <variable name="DATE" expression="date()" defaultValue="" alwaysStopAt="false" />
+    <variable name="ViewModel" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="repository" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Repository" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="results" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Result" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="param" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ParamType" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="getList" expression="" defaultValue="$getList$" alwaysStopAt="true" />
+    <variable name="getListFlowable" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
 </templateSet>
