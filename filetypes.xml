@@ -4,6 +4,7 @@
       <mapping ext="webp" type="Image" />
       <mapping pattern="ITransferInterface" type="PLAIN_TEXT" />
       <mapping pattern="testKotlin" type="PLAIN_TEXT" />
+      <mapping pattern="testKotlin1" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
