@@ -7,6 +7,7 @@
       <mapping pattern="init" type="PLAIN_TEXT" />
       <mapping pattern="ITransferInterface" type="PLAIN_TEXT" />
       <mapping pattern="testKotlin" type="PLAIN_TEXT" />
+      <mapping pattern="config" type="PLAIN_TEXT" />
       <mapping pattern="testKotlin1" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
