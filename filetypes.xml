@@ -3,10 +3,11 @@
     <extensionMap>
       <mapping ext="webp" type="Image" />
       <mapping pattern="TODO" type="PLAIN_TEXT" />
-      <mapping pattern="testKotlin1" type="PLAIN_TEXT" />
+      <mapping pattern="use_x5_data_dir" type="PLAIN_TEXT" />
+      <mapping pattern="init" type="PLAIN_TEXT" />
       <mapping pattern="ITransferInterface" type="PLAIN_TEXT" />
       <mapping pattern="testKotlin" type="PLAIN_TEXT" />
-      <mapping pattern="init" type="PLAIN_TEXT" />
+      <mapping pattern="testKotlin1" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
