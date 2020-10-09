@@ -33,4 +33,5 @@
       <option name="KOTLIN" value="true" />
     </context>
   </template>
+  <template name="llayout" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;layout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;&#10;&#10;    &lt;androidx.constraintlayout.widget.ConstraintLayout&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;match_parent&quot;&gt;&#10;&#10;    &lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;&#10;&lt;/layout&gt;" description="生成默认databinding的xml布局" toReformat="false" toShortenFQNames="true" />
 </templateSet>
