@@ -38,7 +38,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="refresh_swipe" value="app:color=&quot;@{@color/colorPrimary}&quot;&#10;app:onRefreshListener=&quot;@{() -&gt; viewModel.onRefresh()}&quot;&#10;app:refreshing=&quot;@{safeUnbox(viewModel.loading)}&quot;" toReformat="false" toShortenFQNames="true">
+  <template name="refresh_swipe" value="app:color=&quot;@{@color/colorPrimary}&quot;&#10;app:onRefreshListener=&quot;@{() -&gt; viewModel.onRefresh()}&quot;&#10;app:refreshing=&quot;@{safeUnbox(viewModel.loading)}&quot;" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="XML" value="true" />
     </context>
