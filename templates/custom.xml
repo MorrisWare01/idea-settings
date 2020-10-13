@@ -53,7 +53,7 @@
       <option name="KOTLIN" value="true" />
     </context>
   </template>
-  <template name="@JvmOverloads View" value=" @JvmOverloads constructor(&#10;        context: Context,&#10;        attrs: AttributeSet? = null,&#10;        defStyleAttr: Int = 0&#10;) : View(context, attrs, defStyleAttr) {" toReformat="false" toShortenFQNames="true">
+  <template name="@JvmOverloads View" value=" @JvmOverloads constructor(&#10;        context: Context,&#10;        attrs: AttributeSet? = null,&#10;        defStyleAttr: Int = 0&#10;) : View(context, attrs, defStyleAttr) {" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="KOTLIN" value="true" />
     </context>
