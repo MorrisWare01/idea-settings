@@ -12,8 +12,8 @@
       <mapping pattern="ITransferInterface" type="PLAIN_TEXT" />
       <mapping pattern="testKotlin" type="PLAIN_TEXT" />
       <mapping pattern="config" type="PLAIN_TEXT" />
-      <mapping ext="default" type="PLAIN_TEXT" />
       <mapping ext="mk" type="PLAIN_TEXT" />
+      <mapping ext="default" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
