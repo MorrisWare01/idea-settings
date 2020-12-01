@@ -1,3 +1,5 @@
 <templateSet group="Flutter">
-  <template name="thof" value="Theme.of(context)" description="Create ThemeData from build context" toReformat="false" toShortenFQNames="true" />
+  <template name="thof" value="Theme.of(context)" description="Create ThemeData from build context" toReformat="false" toShortenFQNames="true">
+    <context />
+  </template>
 </templateSet>
