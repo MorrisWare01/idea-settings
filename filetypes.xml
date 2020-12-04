@@ -3,8 +3,8 @@
     <extensionMap>
       <mapping pattern="CAZAAAACA4AAAAYAAAAAAAAAAAAQAAAACMAACAA4AAIQADYACQAAAAAAAAMAALQAAAAAAAAAAAAAAAQAAAACYACYAA" type="Image" />
       <mapping ext="webp" type="Image" />
-      <mapping ext="gradle.kts" type="Kotlin" />
       <mapping ext="main.kts" type="Kotlin" />
+      <mapping ext="gradle.kts" type="Kotlin" />
       <mapping pattern="testKotlin1" type="PLAIN_TEXT" />
       <mapping pattern="TODO" type="PLAIN_TEXT" />
       <mapping pattern="use_x5_data_dir" type="PLAIN_TEXT" />
@@ -12,8 +12,8 @@
       <mapping pattern="ITransferInterface" type="PLAIN_TEXT" />
       <mapping pattern="testKotlin" type="PLAIN_TEXT" />
       <mapping pattern="config" type="PLAIN_TEXT" />
-      <mapping ext="mk" type="PLAIN_TEXT" />
       <mapping ext="default" type="PLAIN_TEXT" />
+      <mapping ext="mk" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
