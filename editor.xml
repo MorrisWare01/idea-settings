@@ -8,7 +8,4 @@
   <component name="JetEditorOptions">
     <option name="donTShowConversionDialog" value="true" />
   </component>
-  <component name="XmlSettings">
-    <option name="SHOW_XML_ADD_IMPORT_HINTS" value="false" />
-  </component>
 </application>
