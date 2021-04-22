@@ -82,4 +82,9 @@
       <option name="XML" value="true" />
     </context>
   </template>
+  <template name="&lt;format" value="&lt;import type=&quot;com.xiqu.android.base.helper.FormatHelper&quot; /&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
 </templateSet>
