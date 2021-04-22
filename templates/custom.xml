@@ -63,4 +63,18 @@
       <option name="XML" value="true" />
     </context>
   </template>
+  <template name="&lt;linkurl" value="&lt;import type=&quot;com.xiqu.android.common.helper.HybridUrl&quot; /&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="loadMoreResponse" value="mViewModel.$result$.observe(this, Observer {&#10;    val loadMore = mViewModel.loadMore.value ?: false&#10;    it?.apply {&#10;        if (!loadMore) {&#10;            mAdapter.setNewData(it.list)&#10;            if (!this.isHasNext) {&#10;                mAdapter.loadMoreEnd()&#10;            }&#10;        } else {&#10;            mAdapter.addData(it.list)&#10;            if (this.isHasNext) {&#10;                mAdapter.loadMoreComplete()&#10;            } else {&#10;                mAdapter.loadMoreEnd()&#10;            }&#10;        }&#10;    } ?: apply {&#10;        if (loadMore) {&#10;            mAdapter.loadMoreFail()&#10;        }&#10;    }&#10;})" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="result" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="loadMore" value="mViewModel.$data$.observe(this, Observer {&#10;    val loadMore = mViewModel.loadMore.value ?: false&#10;    it?.apply {&#10;        if (!loadMore) {&#10;            mAdapter.setNewData(this)&#10;            if (this.isNullOrEmpty()) {&#10;                mAdapter.loadMoreEnd()&#10;            }&#10;        } else {&#10;            mAdapter.addData(this)&#10;            if (!this.isNullOrEmpty()) {&#10;                mAdapter.loadMoreComplete()&#10;            } else {&#10;                mAdapter.loadMoreEnd()&#10;            }&#10;        }&#10;    } ?: apply {&#10;        if (loadMore) {&#10;            mAdapter.loadMoreFail()&#10;        }&#10;    }&#10;})" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="data" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
 </templateSet>
