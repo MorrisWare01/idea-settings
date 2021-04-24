@@ -77,12 +77,12 @@
   <template name="loadMore" value="mViewModel.$data$.observe(this, Observer {&#10;    val loadMore = mViewModel.loadMore.value ?: false&#10;    it?.apply {&#10;        if (!loadMore) {&#10;            mAdapter.setNewData(this)&#10;            if (this.isNullOrEmpty()) {&#10;                mAdapter.loadMoreEnd()&#10;            }&#10;        } else {&#10;            mAdapter.addData(this)&#10;            if (!this.isNullOrEmpty()) {&#10;                mAdapter.loadMoreComplete()&#10;            } else {&#10;                mAdapter.loadMoreEnd()&#10;            }&#10;        }&#10;    } ?: apply {&#10;        if (loadMore) {&#10;            mAdapter.loadMoreFail()&#10;        }&#10;    }&#10;})" description="" toReformat="false" toShortenFQNames="true">
     <variable name="data" expression="" defaultValue="" alwaysStopAt="true" />
   </template>
-  <template name="&lt;importbutton" value="&lt;import type=&quot;com.xiqu.android.widget.button.ButtonConfig&quot; /&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="&lt;importbutton" value="&lt;import type=&quot;com.xiqu.android.widget.button.ButtonConfig&quot; /&gt;" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="&lt;format" value="&lt;import type=&quot;com.xiqu.android.base.helper.FormatHelper&quot; /&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="&lt;format" value="&lt;import type=&quot;com.xiqu.android.base.helper.FormatHelper&quot; /&gt;" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="XML" value="true" />
     </context>
